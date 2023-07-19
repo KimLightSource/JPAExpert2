@@ -49,10 +49,10 @@ public class initDb {
             Member member = createMember("userB", "진주", "2", "2222");
             em.persist(member);
 
-            Book book1 = createBook("JPA1 BOOK", 20000, 200);
+            Book book1 = createBook("SPRING1 BOOK", 20000, 200);
             em.persist(book1);
 
-            Book book2 = createBook("JPA2 BOOK", 40000, 300);
+            Book book2 = createBook("SPRING2 BOOK", 40000, 300);
             em.persist(book2);
 
             Delivery delivery = createDelivery(member);
@@ -69,9 +69,9 @@ public class initDb {
             return delivery;
         }
 
-        private Book createBook(String bookName, int price, int stockQuantity) {
+        private Book createBook(String name, int price, int stockQuantity) {
             Book book1 = new Book();
-            book1.setName(bookName);
+            book1.setName(name);
             book1.setPrice(price);
             book1.setStockQuantity(stockQuantity);
             return book1;
